@@ -1,5 +1,3 @@
-using NUnit.Framework.Internal.Execution;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -41,10 +39,10 @@ public class PlayerAttack : MonoBehaviour
                 {
                     UsableItem usable = (UsableItem)currentWeapon.item;
                     usable.Use(player);
-                    if (usable.consumable) 
+                    if (usable.consumable)
                     {
                         currentWeapon.amount--;
-                        if (currentWeapon.amount == 0) 
+                        if (currentWeapon.amount == 0)
                         {
                             currentWeapon.item = null;
                             inventory.needsUpdate = true;
@@ -71,7 +69,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    public void StartDelayAttack(float speed,GameObject attackObject)
+    public void StartDelayAttack(float speed, GameObject attackObject)
     {
         StartCoroutine(DelayAttack(speed, attackObject));
     }
@@ -82,18 +80,18 @@ public class PlayerAttack : MonoBehaviour
         Destroy(attackObject);
     }
 
-    public void DamageLivingEntity(LivingEntity livingEntity) 
+    public void DamageLivingEntity(LivingEntity livingEntity)
     {
         livingEntity.TakeDamage(GetCurrentItemDamage());
     }
 
-    public void OnKilledEnemy(LivingEntity livingEntity) 
+    public void OnKilledEnemy(LivingEntity livingEntity)
     {
         Debug.Log("Killed an enemy");
         player.AddExp(livingEntity.killExp);
         livingEntity.OnKilledEvent -= OnKilledEnemy;
     }
-    private float GetCurrentItemDamage() 
+    private float GetCurrentItemDamage()
     {
         // to do ranged items and modifiers
         return ((Swordbase)currentWeapon.item).baseDamage + player.strength;

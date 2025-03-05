@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec10b422208f592438159f8f55ec3bca, type: 3}
-  m_Name: Basic Sword
+  m_Name: Axe
   m_EditorClassIdentifier: 
-  itemID: 
-  itemName: Basic Sword
-  itemDescription: 'basic bamik '
-  itemIcon: {fileID: -8206596258960034752, guid: 5d39fae9a30b3c04b833066f2610da82, type: 3}
+  itemID: axe
+  itemName: Axe
+  itemDescription: 
+  itemIcon: {fileID: -5825250732961213246, guid: 60bc69d2257856246a2d916df59fcbbf, type: 3}
   itemRarity: 0
   itemType: 0
   maxStack: 1
-  value: 10
+  value: 100
   consumable: 0
   useSound: {fileID: 0}
-  baseDamage: 5
-  baseCritChance: 5
-  baseSpeed: 1.2
+  baseDamage: 20
+  baseCritChance: 0
+  baseSpeed: 0.7
   swordObject: {fileID: 4894167947183618901, guid: 8ae1ceb85f06397439d7468515f8d357, type: 3}

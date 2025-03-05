@@ -26,6 +26,11 @@ public class Player : MonoBehaviour
 
     public List<PotionEffect> potionEffects;
 
+    [Header("Sounds")]
+    public AudioClip walkingSound;
+    public AudioClip runningSound;
+
+
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();

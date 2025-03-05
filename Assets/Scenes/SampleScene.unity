@@ -8084,6 +8084,8 @@ MonoBehaviour:
     amount: 1
   - item: {fileID: 11400000, guid: 0a23656e3ca2bea4dab061d1fea08965, type: 2}
     amount: 1
+  - item: {fileID: 11400000, guid: 046d1ae4c8e630c499db080c1c062206, type: 2}
+    amount: 1
   maxSlots: 10
   needsUpdate: 0
   buySlots: 6
@@ -9442,6 +9444,8 @@ MonoBehaviour:
   tebCoins: 1000
   fentCoins: 0
   potionEffects: []
+  walkingSound: {fileID: 0}
+  runningSound: {fileID: 0}
 --- !u!224 &704553508 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6604045835194273496, guid: afc40b02d8d5eb34da5a47c3613f8162, type: 3}

@@ -17,6 +17,7 @@ public class Swordbase : UsableItem
         GameObject swordGO = Instantiate(swordItem.swordObject, player.playerAttack.itemHolderTransform);
         playerWeapon = swordGO.GetComponent<PlayerWeapon>();
         playerWeapon.playerAttack = player.playerAttack;
+        playerWeapon.weaponSprite.sprite = itemIcon;
 
         player.playerAttack.attackBlocked = true;
         swordGO.GetComponent<Animator>().SetTrigger("Attack");
