@@ -73,11 +73,22 @@ public class PlayerAttack : MonoBehaviour
     {
         StartCoroutine(DelayAttack(speed, attackObject));
     }
+    public void StartDelayAttackRanged(float speed)
+    {
+        StartCoroutine(DelayAttackRanged(speed));
+    }
     IEnumerator DelayAttack(float speed, GameObject attackObject)
     {
+        attackBlocked = true;
         yield return new WaitForSeconds(1f / speed);
         attackBlocked = false;
         Destroy(attackObject);
+    }
+    IEnumerator DelayAttackRanged(float speed)
+    {
+        attackBlocked = true;
+        yield return new WaitForSeconds(1f / speed);
+        attackBlocked = false;
     }
 
     public void DamageLivingEntity(LivingEntity livingEntity)

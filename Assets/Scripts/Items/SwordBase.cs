@@ -7,22 +7,22 @@ public class Swordbase : UsableItem
     public float baseCritChance;
     public float baseSpeed;
     public GameObject swordObject;
+    public float weaponScale = 1;
     public override void Use(Player player)
     {
-        ItemStack currentWeapon = player.playerAttack.currentWeapon;
         PlayerWeapon playerWeapon = player.playerAttack.playerWeapon;
 
-        Swordbase swordItem = (Swordbase)currentWeapon.item;
 
-        GameObject swordGO = Instantiate(swordItem.swordObject, player.playerAttack.itemHolderTransform);
+        GameObject swordGO = Instantiate(swordObject, player.playerAttack.itemHolderTransform);
+        swordGO.transform.localScale.Set(weaponScale, weaponScale, weaponScale);
+        swordGO.transform.SetAsLastSibling();
         playerWeapon = swordGO.GetComponent<PlayerWeapon>();
         playerWeapon.playerAttack = player.playerAttack;
         playerWeapon.weaponSprite.sprite = itemIcon;
 
-        player.playerAttack.attackBlocked = true;
         swordGO.GetComponent<Animator>().SetTrigger("Attack");
-        swordGO.GetComponent<Animator>().speed = swordItem.baseSpeed;
-        player.playerAttack.StartDelayAttack(swordItem.baseSpeed, swordGO);
+        swordGO.GetComponent<Animator>().speed = baseSpeed;
+        player.playerAttack.StartDelayAttack(baseSpeed, swordGO);
 
     }
 }

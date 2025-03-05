@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: axe
   itemName: Axe
-  itemDescription: 
+  itemDescription: You can chop wood
   itemIcon: {fileID: -5825250732961213246, guid: 60bc69d2257856246a2d916df59fcbbf, type: 3}
   itemRarity: 0
   itemType: 0
@@ -26,3 +26,4 @@ MonoBehaviour:
   baseCritChance: 0
   baseSpeed: 0.7
   swordObject: {fileID: 4894167947183618901, guid: 8ae1ceb85f06397439d7468515f8d357, type: 3}
+  weaponScale: 1.2

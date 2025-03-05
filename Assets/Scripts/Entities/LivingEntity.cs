@@ -11,6 +11,9 @@ public class LivingEntity : MonoBehaviour
     public List<ItemStack> lootItems;
     public GameObject itemEntity;
 
+    public AudioClip idleSound;
+    public AudioClip hurtSound;
+
     public event Action<LivingEntity> OnKilledEvent;
 
     public virtual void TakeDamage(float damage)

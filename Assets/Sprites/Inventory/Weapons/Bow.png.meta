@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3307cfc5cfcbe514b94644744d2c2b2d
+guid: 096f3101a3fcdec4c8531c6ba2bab991
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6381545932276173328
-    second: Broadsword_0
+      213: -7856493677412862020
+    second: Bow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Broadsword_0
+      name: Bow_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6
         y: 0
-        width: 30
-        height: 30
-      alignment: 9
-      pivot: {x: 0.13242084, y: 0.13070318}
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01a092be63ecf8850800000000000000
-      internalID: 6381545932276173328
+      spriteID: cb734b930a028f290800000000000000
+      internalID: -7856493677412862020
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c0a2611bd66bdc84a9b7b982a206f27c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Broadsword_0: 6381545932276173328
+      Bow_0: -7856493677412862020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

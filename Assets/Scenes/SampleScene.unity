@@ -6787,6 +6787,8 @@ MonoBehaviour:
   killExp: 10
   lootItems: []
   itemEntity: {fileID: 0}
+  idleSound: {fileID: 0}
+  hurtSound: {fileID: 0}
 --- !u!114 &211158096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6799,7 +6801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3abe586d650dd24cba74f3cf708d7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   detectionRadius: 10
 --- !u!212 &211158097
 SpriteRenderer:
@@ -6845,8 +6847,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3216217425113193877, guid: 4ed9cfd4b70a87a41a9b88ad8b15befb, type: 3}
-  m_Color: {r: 0.039103128, g: 0.46226418, b: 0, a: 1}
+  m_Sprite: {fileID: 8749302817991680212, guid: bf1cabdbd1f46bd409c17ff799c80c95, type: 3}
+  m_Color: {r: 0.9697793, g: 1, b: 0.9669811, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6866,8 +6868,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.99, y: -0.05, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1451326215}
   m_Father: {fileID: 0}
@@ -6933,17 +6935,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00411129, y: 0.008223236}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.125, y: 3.1875}
+    oldSize: {x: 0.625, y: 0.96875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.125, y: 3.1875}
+  m_Size: {x: 0.6562729, y: 1.0658952}
   m_EdgeRadius: 0
 --- !u!1 &219860869
 GameObject:
@@ -7356,6 +7358,8 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 5dd8ed32bbafcb54ba235d621fa234e3, type: 2}
     amount: 1
   itemEntity: {fileID: 8012319209869052097, guid: 657608e5db3ffb347a6c446a6fd710f0, type: 3}
+  idleSound: {fileID: 0}
+  hurtSound: {fileID: 0}
 --- !u!212 &250534448
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8085,6 +8089,8 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 0a23656e3ca2bea4dab061d1fea08965, type: 2}
     amount: 1
   - item: {fileID: 11400000, guid: 046d1ae4c8e630c499db080c1c062206, type: 2}
+    amount: 1
+  - item: {fileID: 11400000, guid: dab1da82804d6c54e8022b83d24f111c, type: 2}
     amount: 1
   maxSlots: 10
   needsUpdate: 0

@@ -53,7 +53,7 @@ public class Inventory : MonoBehaviour
                 itemAmountLeft -= itemsMoved;
                 Debug.Log($"Added Item at {i}");
             }
-            if (itemAmountLeft == 0) return true;
+            if (itemAmountLeft == 0) { needsUpdate = true; return true; }
         }
             
         return false;  // No space found

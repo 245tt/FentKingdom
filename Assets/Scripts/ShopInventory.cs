@@ -63,8 +63,13 @@ public class ShopInventory : Inventory
             }
         }
         player.tebCoins -= buyWorth;
-    }
 
+        for (int i = maxSlots; i < maxSlots + buySlots; i++)
+        {
+            items[i].item = null;
+            items[i].amount = 0;
+        }
+    }
     public void SellItems(Player player)
     {
         CalculateItemWorth();
