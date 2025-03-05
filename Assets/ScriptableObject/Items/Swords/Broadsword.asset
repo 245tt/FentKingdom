@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10b422208f592438159f8f55ec3bca, type: 3}
+  m_Name: Broadsword
+  m_EditorClassIdentifier: 
+  itemID: broadsword
+  itemName: Broadsword
+  itemDescription: Bigger sword for bigger trouble
+  itemIcon: {fileID: 6381545932276173328, guid: 3307cfc5cfcbe514b94644744d2c2b2d, type: 3}
+  itemRarity: 0
+  itemType: 0
+  maxStack: 1
+  value: 100
+  baseDamage: 17
+  baseCritChance: 8
+  baseSpeed: 3
+  swordObject: {fileID: 4894167947183618901, guid: 8ae1ceb85f06397439d7468515f8d357, type: 3}
