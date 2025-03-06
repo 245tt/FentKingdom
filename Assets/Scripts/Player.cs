@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     public AudioClip walkingSound;
     public AudioClip runningSound;
 
-
+    const float armorFactor = 50;
     void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -61,8 +61,9 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
-        //armor calculation to do
-        health -= damage;
+        //armor factor is point where armor reduction is 50%
+        float armorReduction = 1f-(defense / (defense + armorFactor));
+        health -= damage *  armorReduction;
         if (health <= 0) Die();
     }
 
@@ -76,7 +77,6 @@ public class Player : MonoBehaviour
         { 
             if (armorItem != null)
             {
-                Debug.Log(armorItem.itemName);
                 defense += armorItem.defense;
                 speed += armorItem.speed;
                 strength += armorItem.strength;
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Item"))
         {
-            EntityItem item = collision.GetComponent<EntityItem>();
+            ItemEntity item = collision.GetComponent<ItemEntity>();
             if (item != null)
             {
                 playerInventory.AddItem(item.itemStack);

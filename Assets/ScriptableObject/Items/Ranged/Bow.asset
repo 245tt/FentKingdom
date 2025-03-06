@@ -26,4 +26,6 @@ MonoBehaviour:
   baseCritChance: 0
   baseSpeed: 3
   projectileSpeed: 20
+  rangedObject: {fileID: 4894167947183618901, guid: eb4ec97924fa69d4eb665d8fd133ee20, type: 3}
+  rangedScale: 2
   projectile: {fileID: 7995420220508005077, guid: 08e41d919aa75144d8ab0d36450f10e9, type: 3}

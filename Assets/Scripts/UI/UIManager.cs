@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public bool playerInventoryVisible;
     [Header("Player HUD")]
     public Slider healthSlider;
-    public GameObject hudSlots;
+    public GameObject hud;
     public List<ItemSlot> hudItemSlots;
     public GameObject slotPointer;
     public Slider expSlider;
@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour
     {
         inventoryUI = GetComponent<PlayerInventoryUI>();
         healthSlider.value = player.health / player.maxHealth;
-
     }
 
     void Update()
@@ -29,7 +28,7 @@ public class UIManager : MonoBehaviour
         {
             playerInventoryVisible = !playerInventoryVisible;
             inventoryUI.playerInventoryUI.SetActive(playerInventoryVisible);
-            hudSlots.SetActive(!playerInventoryVisible);
+            hud.SetActive(!playerInventoryVisible);
             slotPointer.SetActive(!playerInventoryVisible);
             UpdateUIs();
         }

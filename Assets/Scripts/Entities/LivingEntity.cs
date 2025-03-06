@@ -31,7 +31,7 @@ public class LivingEntity : MonoBehaviour
         foreach (var item in lootItems)
         {
             GameObject entity = Instantiate(itemEntity);
-            EntityItem entityItem = entity.GetComponent<EntityItem>();
+            ItemEntity entityItem = entity.GetComponent<ItemEntity>();
             entityItem.itemStack = item;
             entityItem.UpdateItemStack();
             entity.transform.position = transform.position;

@@ -11,7 +11,7 @@ public class World : MonoBehaviour
     public GameObject SpawnItemEntity(Vector3 position, ItemStack itemStack)
     {
         GameObject entity = Instantiate(itemEntity);
-        EntityItem entityItem = entity.GetComponent<EntityItem>();
+        ItemEntity entityItem = entity.GetComponent<ItemEntity>();
         entityItem.itemStack = itemStack;
         entityItem.UpdateItemStack();
         entity.transform.position = transform.position;

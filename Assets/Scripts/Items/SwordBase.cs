@@ -12,16 +12,29 @@ public class Swordbase : UsableItem
     {
         PlayerWeapon playerWeapon = player.playerAttack.playerWeapon;
 
-
         GameObject swordGO = Instantiate(swordObject, player.playerAttack.itemHolderTransform);
-        swordGO.transform.localScale.Set(weaponScale, weaponScale, weaponScale);
+        float angle = Mathf.Atan2(player.playerAttack.shootDir.y, player.playerAttack.shootDir.x) * Mathf.Rad2Deg;
+        //swordGO.transform.parent.rotation = Quaternion.Euler(0, 0, angle);
+        swordGO.transform.localScale = new Vector3(weaponScale, weaponScale,weaponScale);
         swordGO.transform.SetAsLastSibling();
         playerWeapon = swordGO.GetComponent<PlayerWeapon>();
         playerWeapon.playerAttack = player.playerAttack;
         playerWeapon.weaponSprite.sprite = itemIcon;
 
-        swordGO.GetComponent<Animator>().SetTrigger("Attack");
-        swordGO.GetComponent<Animator>().speed = baseSpeed;
+        Animator swordAnimator = swordGO.GetComponent<Animator>();
+        swordAnimator.SetTrigger("Attack");
+
+        if (angle > -90 && angle < 90)
+        {
+            swordAnimator.SetBool("Flipped",false);
+        }
+        else 
+        {
+            swordAnimator.SetBool("Flipped", true);
+        }
+
+        swordAnimator.speed = baseSpeed ;
+
         player.playerAttack.StartDelayAttack(baseSpeed, swordGO);
 
     }

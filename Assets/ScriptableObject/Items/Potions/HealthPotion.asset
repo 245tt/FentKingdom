@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4c8f06d1332c424bbbd9bb0874b7ef2, type: 3}
-  m_Name: Speed
+  m_Name: HealthPotion
   m_EditorClassIdentifier: 
   itemID: strenght_potion
   itemName: Strength Potion
-  itemDescription: Monster Enegy White
-  itemIcon: {fileID: -5948470176195990875, guid: 7f22256ba362aec428772ca88e020330, type: 3}
+  itemDescription: Cocainum
+  itemIcon: {fileID: 767221563228350119, guid: fe45e226b05618f45af4958161706386, type: 3}
   itemRarity: 0
   itemType: 0
   maxStack: 1
   value: 50
   consumable: 1
+  useSound: {fileID: 0}
   effect:
-    potionType: 2
+    potionType: 0
     duration: 120
     power: 5

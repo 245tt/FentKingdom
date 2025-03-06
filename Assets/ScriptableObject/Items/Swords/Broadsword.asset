@@ -20,7 +20,10 @@ MonoBehaviour:
   itemType: 0
   maxStack: 1
   value: 100
+  consumable: 0
+  useSound: {fileID: 0}
   baseDamage: 17
   baseCritChance: 8
   baseSpeed: 3
   swordObject: {fileID: 4894167947183618901, guid: 8ae1ceb85f06397439d7468515f8d357, type: 3}
+  weaponScale: 2.5
