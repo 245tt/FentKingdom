@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: bow
   itemName: Bow
   itemDescription: To shoot down drones..
-  itemIcon: {fileID: -7856493677412862020, guid: 096f3101a3fcdec4c8531c6ba2bab991, type: 3}
+  itemIcon: {fileID: 21300000, guid: 096f3101a3fcdec4c8531c6ba2bab991, type: 3}
   itemRarity: 0
   itemType: 0
   maxStack: 1

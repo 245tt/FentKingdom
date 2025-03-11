@@ -9,6 +9,7 @@ public class ProjectileEntity : MonoBehaviour
     public float critChance;
     public float baseDamage;
     public AudioClip projectileHitSound;
+    public PlayerAttack playerAttack;
 
     void Start()
     {
@@ -24,7 +25,9 @@ public class ProjectileEntity : MonoBehaviour
         LivingEntity livingEntity;
         if (collision.gameObject.TryGetComponent<LivingEntity>(out livingEntity))
         {
+            livingEntity.OnKilledEvent += playerAttack.OnKilledEnemy;
             livingEntity.TakeDamage(baseDamage);
+            if (livingEntity != null) livingEntity.OnKilledEvent -= playerAttack.OnKilledEnemy;
         }
 
         if (destroyOnCollision) Destroy(gameObject);

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: axe
   itemName: Axe
   itemDescription: You can chop wood
-  itemIcon: {fileID: -5825250732961213246, guid: 60bc69d2257856246a2d916df59fcbbf, type: 3}
+  itemIcon: {fileID: 21300000, guid: 60bc69d2257856246a2d916df59fcbbf, type: 3}
   itemRarity: 0
   itemType: 0
   maxStack: 1

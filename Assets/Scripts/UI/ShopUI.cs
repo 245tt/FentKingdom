@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ShopUI : MonoBehaviour
 {
     public static ShopUI instance;
+    public UIManager UIManager;
     public Player player;
     public ShopInventory shop;
     List<ItemSlot> itemSlots;
@@ -29,6 +30,7 @@ public class ShopUI : MonoBehaviour
             HideUI();
         }
         shopUIPanel.SetActive(true);
+        UIManager.ShowInventory();
         IsOpen = true;
 
         this.player = player;
@@ -71,6 +73,7 @@ public class ShopUI : MonoBehaviour
     }
     public void HideUI()
     {
+        if (!IsOpen) return;
         shop.DropSellItems(player);
 
         shopUIPanel.SetActive(false);
@@ -91,7 +94,7 @@ public class ShopUI : MonoBehaviour
         instance = this;
         shopUIPanel.SetActive(false);
         IsOpen = false;
-        //HideUI();
+        UIManager = GetComponent<UIManager>();
     }
 
     private void Update()
@@ -115,9 +118,6 @@ public class ShopUI : MonoBehaviour
         shop.CalculateItemWorth();
         buyWorthText.text = shop.buyWorth.ToString();
         sellWorthText.text = shop.sellWorth.ToString();
-
-        if (Input.GetKeyDown(KeyCode.Escape)) HideUI();
-
 
     }
 }

@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyOnCollision: 1
-  despawnTimer: 15
+  despawnTimer: 5
   critChance: 0
   baseDamage: 0
   projectileHitSound: {fileID: 0}

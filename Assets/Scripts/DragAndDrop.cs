@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DragAndDrop : MonoBehaviour
 {
-    public ItemSlot startingItemSlot;
     public EventSystem eventSystem;
 
     [Header("Item infomation components")]
@@ -14,10 +14,17 @@ public class DragAndDrop : MonoBehaviour
     public ItemInformation itemInformation;
     public GameObject itemInformationPrefab;
     public GameObject popupCanvas;
-    ItemSlot draggedSlot;
+    public GameObject draggedItem;
+    public Image draggedItemImage;
+    public ItemSlot startingItemSlot;
     ItemSlot hoveredSlot;
+    private void Start()
+    {
+        draggedItemImage = draggedItem.GetComponent<Image>();
+    }
     void Update()
     {
+        //drag and drop
         if (Input.GetMouseButtonDown(0))
         {
             startingItemSlot = GetSlotUnderCursor();
@@ -31,7 +38,24 @@ public class DragAndDrop : MonoBehaviour
             }
             startingItemSlot = null;
         }
+        if (Input.GetMouseButton(0))
+        {
+            if (startingItemSlot != null)
+            {
 
+                if (startingItemSlot.draggable && startingItemSlot.itemStack.item != null)
+                {
+                    draggedItem.transform.position = Input.mousePosition;
+                    draggedItemImage.enabled = true;
+                    draggedItemImage.sprite = startingItemSlot.itemStack.item.itemIcon;
+                }
+            }
+            else draggedItemImage.enabled = false;
+        }
+        else draggedItemImage.enabled = false;
+
+
+        // item information
         ItemSlot slotinfo = GetSlotUnderCursor();
         if (slotinfo != null)
         {

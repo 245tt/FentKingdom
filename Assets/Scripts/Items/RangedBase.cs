@@ -17,8 +17,10 @@ public class Rangedbase : UsableItem
 
         GameObject ranged = Instantiate(rangedObject, player.playerAttack.itemHolderTransform);
         float angle = Mathf.Atan2(player.playerAttack.shootDir.y, player.playerAttack.shootDir.x) * Mathf.Rad2Deg;
-        ranged.transform.parent.rotation = Quaternion.Euler(0, 0, angle);
+        ranged.transform.rotation = Quaternion.Euler(0, 0, angle);
         ranged.transform.localScale = new Vector3(rangedScale, rangedScale, rangedScale);
+        float distance = 1.4f;
+        ranged.transform.localPosition = new Vector3(player.playerAttack.shootDir.x* distance, player.playerAttack.shootDir.y * distance, 0);
         ranged.transform.SetAsLastSibling();
         PlayerWeapon rangedWeapon = ranged.GetComponent<PlayerWeapon>();
         rangedWeapon.playerAttack = player.playerAttack;
@@ -30,6 +32,7 @@ public class Rangedbase : UsableItem
         bullet.GetComponent<Rigidbody2D>().linearVelocity = player.playerAttack.shootDir * projectileSpeed;
 
         ProjectileEntity projectileComp = bullet.GetComponent<ProjectileEntity>();
+        projectileComp.playerAttack = player.playerAttack;
         projectileComp.baseDamage = baseDamage;
         projectileComp.critChance = baseCritChance;
 

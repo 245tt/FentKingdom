@@ -1,18 +1,20 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
+[RequireComponent(typeof(AudioSource))]
 public class LivingEntity : MonoBehaviour
 {
-
+    private AudioSource audioSource;
     public float MaxHealth;
     public float Health;
     public int killExp;
     public List<ItemStack> lootItems;
-    public GameObject itemEntity;
 
-    public AudioClip idleSound;
-    public AudioClip hurtSound;
+    public List<AudioClip> idleSounds;
+    public List<AudioClip> hurtSounds;
+    public AudioClip dieSound;
 
     public event Action<LivingEntity> OnKilledEvent;
 
@@ -23,24 +25,27 @@ public class LivingEntity : MonoBehaviour
         {
             Die();
         }
+        else PlayRandomSound(hurtSounds);
+        
     }
     public virtual void Die()
     {
         OnKilledEvent?.Invoke(this);
-
+        World world = World.GetInstance();
         foreach (var item in lootItems)
         {
-            GameObject entity = Instantiate(itemEntity);
-            ItemEntity entityItem = entity.GetComponent<ItemEntity>();
-            entityItem.itemStack = item;
-            entityItem.UpdateItemStack();
-            entity.transform.position = transform.position;
+            world.SpawnItemEntity(gameObject.transform.position,item);
         }
-
+        audioSource.PlayOneShot(dieSound);
         Destroy(gameObject);
     }
     public virtual void Start()
     {
         Health = MaxHealth;
+        audioSource = GetComponent<AudioSource>();
+    }
+    public void PlayRandomSound(List<AudioClip> sounds)
+    {
+        audioSource.PlayOneShot(sounds[UnityEngine.Random.Range(0, sounds.Count - 1)]);
     }
 }

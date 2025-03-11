@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c8f06d1332c424bbbd9bb0874b7ef2, type: 3}
   m_Name: StrengthPotion
   m_EditorClassIdentifier: 
-  itemID: strenght_potion
+  itemID: strength_potion
   itemName: Strength Potion
   itemDescription: Cocainum
   itemIcon: {fileID: 3851267928337055994, guid: 3f6644b9e3d8c094782356ddb2c875fa, type: 3}
@@ -21,6 +21,7 @@ MonoBehaviour:
   maxStack: 1
   value: 50
   consumable: 1
+  useSound: {fileID: 0}
   effect:
     potionType: 1
     duration: 120

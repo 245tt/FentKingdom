@@ -33,12 +33,13 @@ public class PlayerAttack : MonoBehaviour
 
         if (currentWeapon.item != null)
         {
-            if (Input.GetButton("Fire1") && !attackBlocked)
+            if (Input.GetButton("Fire1") && !attackBlocked && !player.actionsBlocked)
             {
                 if (currentWeapon.item is UsableItem)
                 {
                     UsableItem usable = (UsableItem)currentWeapon.item;
                     usable.Use(player);
+                    player.PlayRandomSound(usable.useSounds);
                     if (usable.consumable)
                     {
                         currentWeapon.amount--;
@@ -59,16 +60,25 @@ public class PlayerAttack : MonoBehaviour
         {
             currentSlot++;
             currentSlot %= 5;
-            currentWeapon = inventory.items[currentSlot];
+            UpdateCurrentWeapon();
         }
         else if (Input.mouseScrollDelta.y < 0)
         {
             currentSlot--;
             if (currentSlot == -1) currentSlot = 4;
-            currentWeapon = inventory.items[currentSlot];
+            UpdateCurrentWeapon();
         }
-    }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1)) currentSlot = 0;
+        if (Input.GetKeyDown(KeyCode.Alpha2)) currentSlot = 1;
+        if (Input.GetKeyDown(KeyCode.Alpha3)) currentSlot = 2;
+        if (Input.GetKeyDown(KeyCode.Alpha4)) currentSlot = 3;
+        if (Input.GetKeyDown(KeyCode.Alpha5)) currentSlot = 4;
+    }
+    public void UpdateCurrentWeapon() 
+    {
+        currentWeapon = inventory.items[currentSlot];
+    }
     public void StartDelayAttack(float speed, GameObject attackObject)
     {
         StartCoroutine(DelayAttack(speed, attackObject));

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public UIManager UIManager;
-
+    public AudioSource audioSource;
+    public bool actionsBlocked;
     [Header("Player components")]
     public PlayerMovement playerMovement;
     public PlayerInventory playerInventory;
@@ -27,12 +28,14 @@ public class Player : MonoBehaviour
     public List<PotionEffect> potionEffects;
 
     [Header("Sounds")]
-    public AudioClip walkingSound;
-    public AudioClip runningSound;
+    public List<AudioClip> hurtSounds;
+    public List<AudioClip> walkingSounds;
+    public List<AudioClip> runningSounds;
 
     const float armorFactor = 50;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         playerInventory = GetComponent<PlayerInventory>();
         playerAttack = GetComponent<PlayerAttack>();
@@ -64,7 +67,13 @@ public class Player : MonoBehaviour
         //armor factor is point where armor reduction is 50%
         float armorReduction = 1f-(defense / (defense + armorFactor));
         health -= damage *  armorReduction;
+        PlayRandomSound(hurtSounds);
         if (health <= 0) Die();
+    }
+
+    public void PlayRandomSound(List<AudioClip> sounds) 
+    {
+        audioSource.PlayOneShot(sounds[Random.Range(0,sounds.Count-1)]);
     }
 
     public void RecalculateStats()

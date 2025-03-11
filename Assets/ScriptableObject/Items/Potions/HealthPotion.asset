@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c8f06d1332c424bbbd9bb0874b7ef2, type: 3}
   m_Name: HealthPotion
   m_EditorClassIdentifier: 
-  itemID: strenght_potion
-  itemName: Strength Potion
-  itemDescription: Cocainum
+  itemID: health_potion
+  itemName: Health Potion
+  itemDescription: 
   itemIcon: {fileID: 767221563228350119, guid: fe45e226b05618f45af4958161706386, type: 3}
   itemRarity: 0
   itemType: 0

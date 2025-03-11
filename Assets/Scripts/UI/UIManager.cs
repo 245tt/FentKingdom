@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public PlayerInventoryUI inventoryUI;
+    public ShopUI shopUI;
     public Player player;
     public bool playerInventoryVisible;
     [Header("Player HUD")]
@@ -19,6 +20,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         inventoryUI = GetComponent<PlayerInventoryUI>();
+        shopUI = GetComponent<ShopUI>();
         healthSlider.value = player.health / player.maxHealth;
     }
 
@@ -26,11 +28,15 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Inventory"))
         {
-            playerInventoryVisible = !playerInventoryVisible;
-            inventoryUI.playerInventoryUI.SetActive(playerInventoryVisible);
-            hud.SetActive(!playerInventoryVisible);
-            slotPointer.SetActive(!playerInventoryVisible);
-            UpdateUIs();
+            if (playerInventoryVisible)
+            {
+                HideInventory();
+                shopUI.HideUI();
+            }
+            else
+            {
+                ShowInventory();
+            }
         }
         if (player.playerInventory.needsUpdate)
         {
@@ -45,14 +51,41 @@ public class UIManager : MonoBehaviour
         lvlText.text = player.level.ToString();
 
         slotPointer.transform.position = hudItemSlots[player.playerAttack.currentSlot].transform.position;
+
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            HideInventory();
+            shopUI.HideUI();
+
+        }
+
     }
 
-    public void UpdateUIs() 
+    public void UpdateUIs()
     {
         inventoryUI.UpdatePlayerInventory();
         for (int i = 0; i < hudItemSlots.Count; i++)
         {
             hudItemSlots[i].SetItem(player.playerInventory.items[i]);
         }
+        player.playerAttack.UpdateCurrentWeapon();
+    }
+    public void ShowInventory()
+    {
+        playerInventoryVisible = true;
+        inventoryUI.playerInventoryUI.SetActive(true);
+        hud.SetActive(false);
+        slotPointer.SetActive(false);
+        UpdateUIs();
+        player.actionsBlocked = true;
+    }
+    public void HideInventory()
+    {
+        playerInventoryVisible = false;
+        inventoryUI.playerInventoryUI.SetActive(false);
+        hud.SetActive(true);
+        slotPointer.SetActive(true);
+        player.actionsBlocked = false;
     }
 }
