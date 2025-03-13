@@ -118,4 +118,9 @@ public class ShopInventory : Inventory
             }
         }
     }
+
+    public void OpenShop() 
+    {
+        ShopUI.instance.ShowUI(this);
+    }
 }

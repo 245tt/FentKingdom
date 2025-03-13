@@ -46,6 +46,7 @@ public class LivingEntity : MonoBehaviour
     }
     public void PlayRandomSound(List<AudioClip> sounds)
     {
+        if (sounds.Count < 1) return;
         audioSource.PlayOneShot(sounds[UnityEngine.Random.Range(0, sounds.Count - 1)]);
     }
 }

@@ -23,18 +23,16 @@ public class ShopUI : MonoBehaviour
     public GameObject shopInventoryItemsTransform;
     public bool IsOpen { get; private set; }
 
-    public void ShowUI(ShopNPC shopNPC, Player player)
+    public void ShowUI(ShopInventory shop)
     {
-        if (IsOpen)
-        {
-            HideUI();
-        }
+        if (IsOpen) HideUI();
+
         shopUIPanel.SetActive(true);
         UIManager.ShowInventory();
         IsOpen = true;
 
-        this.player = player;
-        this.shop = shopNPC.shop;
+        this.shop = shop;
+        player = World.GetInstance().player;
 
         itemSlots = new List<ItemSlot>();
         buyItemSlots = new List<ItemSlot>();
@@ -95,6 +93,7 @@ public class ShopUI : MonoBehaviour
         shopUIPanel.SetActive(false);
         IsOpen = false;
         UIManager = GetComponent<UIManager>();
+        shop = GetComponent<ShopInventory>();
     }
 
     private void Update()

@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public PlayerInventoryUI inventoryUI;
+    public DialogueUI dialogueUI;
     public ShopUI shopUI;
     public Player player;
     public bool playerInventoryVisible;
+    public bool hudVisible;
+    public bool dialogueVisible;
     [Header("Player HUD")]
     public Slider healthSlider;
     public GameObject hud;
@@ -21,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         inventoryUI = GetComponent<PlayerInventoryUI>();
         shopUI = GetComponent<ShopUI>();
+        dialogueUI = GetComponent<DialogueUI>();
         healthSlider.value = player.health / player.maxHealth;
     }
 
@@ -32,6 +36,7 @@ public class UIManager : MonoBehaviour
             {
                 HideInventory();
                 shopUI.HideUI();
+                dialogueUI.HideUI();
             }
             else
             {
@@ -57,7 +62,7 @@ public class UIManager : MonoBehaviour
         {
             HideInventory();
             shopUI.HideUI();
-
+            dialogueUI.HideUI();
         }
 
     }
@@ -75,8 +80,7 @@ public class UIManager : MonoBehaviour
     {
         playerInventoryVisible = true;
         inventoryUI.playerInventoryUI.SetActive(true);
-        hud.SetActive(false);
-        slotPointer.SetActive(false);
+        HideHUD();
         UpdateUIs();
         player.actionsBlocked = true;
     }
@@ -84,8 +88,19 @@ public class UIManager : MonoBehaviour
     {
         playerInventoryVisible = false;
         inventoryUI.playerInventoryUI.SetActive(false);
+        ShowHUD();
+        player.actionsBlocked = false;
+    }
+    public void ShowHUD() 
+    {
+        hudVisible = true;
         hud.SetActive(true);
         slotPointer.SetActive(true);
-        player.actionsBlocked = false;
+    }
+    public void HideHUD()
+    {
+        hudVisible = false;
+        hud.SetActive(false);
+        slotPointer.SetActive(false);
     }
 }

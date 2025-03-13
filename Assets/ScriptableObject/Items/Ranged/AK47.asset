@@ -21,11 +21,11 @@ MonoBehaviour:
   maxStack: 1
   value: 0
   consumable: 0
-  useSound: {fileID: 0}
+  useSounds: []
   baseDamage: 10
   baseCritChance: 20
   baseSpeed: 10
   projectileSpeed: 30
   rangedObject: {fileID: 4894167947183618901, guid: eb4ec97924fa69d4eb665d8fd133ee20, type: 3}
-  rangedScale: 3
+  rangedScale: 2
   projectile: {fileID: 7995420220508005077, guid: 9ba4b9d7ed711df45967b9a303e96899, type: 3}

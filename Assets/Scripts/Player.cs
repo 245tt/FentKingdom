@@ -65,15 +65,16 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         //armor factor is point where armor reduction is 50%
-        float armorReduction = 1f-(defense / (defense + armorFactor));
-        health -= damage *  armorReduction;
+        float armorReduction = 1f - (defense / (defense + armorFactor));
+        health -= damage * armorReduction;
         PlayRandomSound(hurtSounds);
         if (health <= 0) Die();
     }
 
-    public void PlayRandomSound(List<AudioClip> sounds) 
+    public void PlayRandomSound(List<AudioClip> sounds)
     {
-        audioSource.PlayOneShot(sounds[Random.Range(0,sounds.Count-1)]);
+        if (sounds.Count < 1) return;
+        audioSource.PlayOneShot(sounds[Random.Range(0, sounds.Count - 1)]);
     }
 
     public void RecalculateStats()
@@ -83,7 +84,7 @@ public class Player : MonoBehaviour
         defense = 0;
 
         foreach (ArmorBase armorItem in playerInventory.GetArmors())
-        { 
+        {
             if (armorItem != null)
             {
                 defense += armorItem.defense;
@@ -131,42 +132,50 @@ public class Player : MonoBehaviour
     {
         return (int)(Mathf.Pow(level, 1.5f) * 100);
     }
-    IEnumerator PotionEffectCounter() 
+    IEnumerator PotionEffectCounter()
     {
         while (true)
         {
-            foreach (PotionEffect potion in potionEffects)
+
+            for (int i = potionEffects.Count-1; i >= 0; i--)
             {
+                
+                PotionEffect potion = potionEffects[i];
+            
                 potion.duration--;
-                if (potion.potionType == PotionType.Health) 
+                if (potion.potionType == PotionType.Health)
                 {
                     health += potion.power;
-                    health = Mathf.Min(health,maxHealth);
+                    health = Mathf.Min(health, maxHealth);
                 }
-                if (potion.duration == 0) 
+                if (potion.duration == 0)
                 {
-                    potionEffects.Remove(potion); 
+                    potionEffects.Remove(potion);
                     RecalculateStats();
                 }
             }
             yield return new WaitForSeconds(1f);
         }
     }
-    public void AddPotionEffect(PotionEffect newPotion) 
+    public void AddPotionEffect(PotionEffect newPotion)
     {
         bool foundPotType = false;
         foreach (PotionEffect pot in potionEffects)
         {
-            if (pot.potionType == newPotion.potionType) 
+            if (pot.potionType == newPotion.potionType)
             {
                 pot.duration = newPotion.duration;
                 foundPotType = true;
                 break;
             }
         }
-        if (!foundPotType) 
+        if (!foundPotType)
         {
-            potionEffects.Add(new PotionEffect {potionType = newPotion.potionType, power=newPotion.power,duration=newPotion.duration });
+            potionEffects.Add(new PotionEffect { potionType = newPotion.potionType, power = newPotion.power, duration = newPotion.duration });
         }
     }
+    public void AddItemStack() 
+    {
+
+     }
 }

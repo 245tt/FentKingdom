@@ -6,12 +6,15 @@ public class World : MonoBehaviour
 
 
     private static World instance;
+    public Player player;
 
     public static World GetInstance() { return instance; }
-    private void Start()
+    private void Awake()
     {
         instance = this;
+        player = FindFirstObjectByType<Player>();
     }
+
     public GameObject SpawnItemEntity(Vector3 position, ItemStack itemStack)
     {
         GameObject entity = Instantiate(itemEntity);
