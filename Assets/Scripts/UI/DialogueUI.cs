@@ -27,7 +27,7 @@ public class DialogueUI : MonoBehaviour
     private void Start()
     {
         dialogueGameObject.SetActive(false);
-        uiManager  = GetComponent<UIManager>();
+        uiManager = GetComponent<UIManager>();
     }
 
     void Update()
@@ -63,8 +63,12 @@ public class DialogueUI : MonoBehaviour
         }
         IsOpen = false;
         dialogueGameObject.SetActive(false);
-        uiManager.ShowHUD();
-        uiManager.player.actionsBlocked = false;
+
+        if (!uiManager.playerInventoryVisible)
+        {
+            uiManager.player.actionsBlocked = false;
+            uiManager.ShowHUD();
+        }
     }
     public void TriggerOption(int index)
     {
@@ -83,7 +87,7 @@ public class DialogueUI : MonoBehaviour
         {
             dialogueIndex++;
         }
-        if(dialogueIndex == dialogue.lines.Count-1)
+        if (dialogueIndex == dialogue.lines.Count - 1)
         {
             if (dialogueOptions.transform.childCount == 0)
             {

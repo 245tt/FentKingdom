@@ -22,7 +22,7 @@ MonoBehaviour:
   value: 20
   consumable: 0
   useSounds: []
-  baseDamage: 5
+  baseDamage: 15
   baseCritChance: 0
   baseSpeed: 3
   projectileSpeed: 20

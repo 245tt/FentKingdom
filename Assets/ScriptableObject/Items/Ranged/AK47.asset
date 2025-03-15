@@ -19,7 +19,7 @@ MonoBehaviour:
   itemRarity: 1
   itemType: 0
   maxStack: 1
-  value: 0
+  value: 100
   consumable: 0
   useSounds: []
   baseDamage: 10

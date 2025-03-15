@@ -19,7 +19,7 @@ MonoBehaviour:
   itemRarity: 0
   itemType: 6
   maxStack: 1
-  value: 0
+  value: 10
   defense: 10
   speed: 0
   strength: 0

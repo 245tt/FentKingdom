@@ -25,6 +25,8 @@ public class Rangedbase : UsableItem
         PlayerWeapon rangedWeapon = ranged.GetComponent<PlayerWeapon>();
         rangedWeapon.playerAttack = player.playerAttack;
         rangedWeapon.weaponSprite.sprite = itemIcon;
+        if (angle > -90 && angle < 90) rangedWeapon.weaponSprite.flipY = false;
+        else rangedWeapon.weaponSprite.flipY = true;   
 
         GameObject bullet = Instantiate(projectile);
         bullet.transform.position = player.transform.position;

@@ -27,10 +27,12 @@ public class Swordbase : UsableItem
         if (angle > -90 && angle < 90)
         {
             swordAnimator.SetBool("Flipped",false);
+            playerWeapon.weaponSprite.flipX = false;
         }
         else 
         {
             swordAnimator.SetBool("Flipped", true);
+            playerWeapon.weaponSprite.flipX = true;
         }
 
         swordAnimator.speed = baseSpeed ;
