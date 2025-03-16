@@ -112,9 +112,11 @@ public class Player : MonoBehaviour
             ItemEntity item = collision.GetComponent<ItemEntity>();
             if (item != null)
             {
-                playerInventory.AddItem(item.itemStack);
-                UIManager.UpdateUIs();
-                Destroy(item.gameObject);
+                if (playerInventory.AddItem(item.itemStack)) 
+                {
+                    UIManager.UpdateUIs();
+                    Destroy(item.gameObject);
+                }
             }
         }
     }
@@ -174,8 +176,4 @@ public class Player : MonoBehaviour
             potionEffects.Add(new PotionEffect { potionType = newPotion.potionType, power = newPotion.power, duration = newPotion.duration });
         }
     }
-    public void AddItemStack() 
-    {
-
-     }
 }

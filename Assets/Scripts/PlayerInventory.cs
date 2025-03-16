@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using Unity.Mathematics;
+using UnityEngine;
 
 
 public class PlayerInventory : Inventory
@@ -50,5 +52,33 @@ public class PlayerInventory : Inventory
     public ItemStack GetShieldSlot()
     {
         return items[maxSlots + 6];
+    }
+    public override bool AddItem(ItemStack item)
+    {
+        int itemAmountLeft = item.amount;
+        int maxStack = item.item.maxStack;
+        for (int i = 0; i < maxSlots; i++)
+        {
+
+            if (items[i] == null)
+            {
+                items[i].item = item.item;
+                int itemsMoved = math.min(itemAmountLeft, maxStack);
+                items[i].amount = itemsMoved;
+                itemAmountLeft -= itemsMoved;
+                Debug.Log($"Added Item at {i}");
+            }
+            else if (items[i].item == null)
+            {
+                items[i].item = item.item;
+                int itemsMoved = math.min(itemAmountLeft, maxStack);
+                items[i].amount = itemsMoved;
+                itemAmountLeft -= itemsMoved;
+                Debug.Log($"Added Item at {i}");
+            }
+            if (itemAmountLeft == 0) { needsUpdate = true; return true; }
+        }
+
+        return false;  // No space found
     }
 }

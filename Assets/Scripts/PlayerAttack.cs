@@ -5,6 +5,7 @@ public class PlayerAttack : MonoBehaviour
 {
     PlayerInventory inventory;
     Player player;
+    Animator animator;
     [Header("Item holder variables")]
     public Transform itemHolderTransform;
     public bool attackBlocked = false;
@@ -17,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     {
         player = GetComponent<Player>();
         inventory = GetComponent<PlayerInventory>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -39,6 +41,7 @@ public class PlayerAttack : MonoBehaviour
                 {
                     UsableItem usable = (UsableItem)currentWeapon.item;
                     usable.Use(player);
+                    animator.SetTrigger("Attack");
                     player.PlayRandomSound(usable.useSounds);
                     if (usable.consumable)
                     {

@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  detectionRadius: 15
+  detectionRadius: 8
 --- !u!95 &911260447779916124
 Animator:
   serializedVersion: 7
