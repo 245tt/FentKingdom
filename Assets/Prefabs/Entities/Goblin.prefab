@@ -140,7 +140,8 @@ MonoBehaviour:
   killExp: 10
   lootItems: []
   idleSounds: []
-  hurtSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: d345cbafdad2db9499c231baad570e1c, type: 3}
   dieSound: {fileID: 0}
 --- !u!50 &8156005460453055053
 Rigidbody2D:

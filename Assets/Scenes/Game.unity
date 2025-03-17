@@ -47371,12 +47371,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: 0460b501665810b4bbc9ae9e775005b3, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0460b501665810b4bbc9ae9e775005b3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.305
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -50375,7 +50375,8 @@ MonoBehaviour:
   UIManager: {fileID: 1689424984}
   player: {fileID: 690396851}
   shop: {fileID: 0}
-  sellItemSlots: []
+  sellItemSlots:
+  - {fileID: 0}
   buyItemSlots: []
   sellButton: {fileID: 1442434788}
   buyButton: {fileID: 2116338689}
@@ -51480,6 +51481,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1372864301881314692, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372864301881314692, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d345cbafdad2db9499c231baad570e1c, type: 3}
+    - target: {fileID: 1372864301881314692, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d345cbafdad2db9499c231baad570e1c, type: 3}
+    - target: {fileID: 1372864301881314692, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372864301881314692, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: BypassListenerEffects
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3760238098427169010, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.82
@@ -51520,6 +51541,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4557895891926753257, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: hurtSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4557895891926753257, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
+      propertyPath: 'hurtSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: d345cbafdad2db9499c231baad570e1c, type: 3}
     - target: {fileID: 7690035108600413655, guid: e32b589324c7e4c4c846c508d678a31b, type: 3}
       propertyPath: m_Name
       value: Zombie
