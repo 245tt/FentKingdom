@@ -21,7 +21,8 @@ MonoBehaviour:
   maxStack: 1
   value: 50
   consumable: 1
-  useSound: {fileID: 0}
+  useSounds:
+  - {fileID: 8300000, guid: ad81970b34b017d4680e79eaced25079, type: 3}
   effect:
     potionType: 2
     duration: 30

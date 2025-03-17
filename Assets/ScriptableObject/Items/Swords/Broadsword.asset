@@ -21,7 +21,8 @@ MonoBehaviour:
   maxStack: 1
   value: 100
   consumable: 0
-  useSound: {fileID: 0}
+  useSounds:
+  - {fileID: 8300000, guid: 105d4afc6bc17d94292cd5a459213f2d, type: 3}
   baseDamage: 17
   baseCritChance: 8
   baseSpeed: 3

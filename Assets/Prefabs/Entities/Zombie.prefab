@@ -211,7 +211,8 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: 5f11af5f7e5049f47a49040e71199383, type: 2}
     amount: 1
   idleSounds: []
-  hurtSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: d345cbafdad2db9499c231baad570e1c, type: 3}
   dieSound: {fileID: 0}
 --- !u!50 &4707017019480458697
 Rigidbody2D:
