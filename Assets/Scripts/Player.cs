@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerInventory playerInventory;
     public PlayerAttack playerAttack;
+    public Animator levelUpAnimator;
     [Header("Player stats")]
     public float maxHealth;
     public float health;
@@ -31,6 +32,7 @@ public class Player : MonoBehaviour
     public List<AudioClip> hurtSounds;
     public List<AudioClip> walkingSounds;
     public List<AudioClip> runningSounds;
+    public AudioClip levelUpSound;
 
     const float armorFactor = 50;
     void Start()
@@ -128,6 +130,8 @@ public class Player : MonoBehaviour
         {
             level++;
             experienceToNextLevel = CalculateExpToNextLevel(level);
+            audioSource.PlayOneShot(levelUpSound);
+            levelUpAnimator.SetTrigger("LevelUp");
         }
     }
     public int CalculateExpToNextLevel(int lvl)

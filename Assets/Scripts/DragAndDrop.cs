@@ -128,6 +128,7 @@ public class DragAndDrop : MonoBehaviour
             itemInformation.itemDescription.text = itemStack.item.itemDescription;
             itemInformation.itemStats.text = "item stats placeholder";
             itemInformation.itemModifiers.text = "item modifier placeholder";
+            itemInformation.itemValue.text = itemStack.item.value.ToString();
             itemInformation.itemRarity.text = itemStack.item.itemRarity.ToString();
         }
     }
