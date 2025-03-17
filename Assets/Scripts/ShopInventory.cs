@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class ShopInventory : Inventory
 {
     public int buySlots;
@@ -5,9 +7,13 @@ public class ShopInventory : Inventory
 
     public int buyWorth;
     public int sellWorth;
-
+    
+    AudioSource audioSource;
+    public AudioClip addToCartSound;
+    public AudioClip buySound;
     public override void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         while (items.Count != maxSlots) items.Add(new ItemStack(null, 0));
 
         for (int i = 0; i < sellSlots; i++)
@@ -28,6 +34,7 @@ public class ShopInventory : Inventory
             {
                 items[i].amount++;
                 needsUpdate = true;
+                audioSource.PlayOneShot(addToCartSound);
                 break;
             }
             else if (items[i].item == null)
@@ -35,6 +42,7 @@ public class ShopInventory : Inventory
                 items[i].item = itemStack.item;
                 items[i].amount = 1;
                 needsUpdate = true;
+                audioSource.PlayOneShot(addToCartSound);
                 break;
             }
         }
@@ -63,7 +71,7 @@ public class ShopInventory : Inventory
             }
         }
         player.tebCoins -= buyWorth;
-
+        audioSource.PlayOneShot(buySound);
         for (int i = maxSlots; i < maxSlots + buySlots; i++)
         {
             items[i].item = null;
@@ -73,6 +81,7 @@ public class ShopInventory : Inventory
     public void SellItems(Player player)
     {
         CalculateItemWorth();
+        bool hasSoldItems = false;
         for (int i = maxSlots + buySlots; i < maxSlots + buySlots + sellSlots; i++)
         {
             if (items[i].item != null)
@@ -82,9 +91,11 @@ public class ShopInventory : Inventory
                     player.tebCoins += (items[i].item.value * items[i].amount) / 2;
                     items[i].item = null;
                     items[i].amount = 0;
+                    hasSoldItems = true;
                 }
             }
         }
+        if(hasSoldItems) audioSource.PlayOneShot(buySound);
     }
     public void DropSellItems(Player player)
     {

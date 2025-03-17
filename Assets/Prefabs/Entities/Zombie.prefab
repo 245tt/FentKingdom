@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3abe586d650dd24cba74f3cf708d7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   detectionRadius: 8
 --- !u!95 &911260447779916124
 Animator:
