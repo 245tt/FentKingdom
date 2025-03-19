@@ -46070,24 +46070,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lines:
-  - text: "A ty to kto? pierdolony obie\u017Cy\u015Bwiat! Jeste\u015B tu, \u017Ceby
-      popatrze\u0107, jak stary Kowal rze\u017Abi w \u017Celazie, czy przysz\u0142e\u015B
-      tylko po jakie\u015B pierdolone artefakty, co? Pytam, bo je\u015Bli zamierzasz
-      tylko przygl\u0105da\u0107 si\u0119 mojej pracy, to wypierdalaj, nie mam czasu
-      na gapi\xF3w."
+  - text: "A ty to kto? Obie\u017Cy\u015Bwiat z przypadku? Przyszed\u0142e\u015B
+      tu tylko patrze\u0107, jak stary kowal haruje przy \u017Celazie, czy mo\u017Ce
+      liczysz na jaki\u015B cenny artefakt? Pytam, bo je\u015Bli zamierzasz tylko
+      sta\u0107 i si\u0119 gapi\u0107, to radz\u0119 poszuka\u0107 sobie innej rozrywki.\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
   - text: "Sk\u0105d wiesz, \u017Ce nie mam czym zap\u0142aci\u0107 za tw\xF3j czas?
-      Poza tym jak bym chcia\u0142, to zarobi\u0119 par\u0119 koron, a wtedy b\u0119dziesz
-      musia\u0142 mnie ugo\u015Bci\u0107 z u\u015Bmiechem na twarzy "
+      Poza tym, gdybym chcia\u0142, to zarobi\u0142bym kilka koron i wtedy musia\u0142by\u015B
+      mnie ugo\u015Bci\u0107 z u\u015Bmiechem na twarzy.\r\n"
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Ha! No w\u0142a\u015Bnie! Wiesz, co? Niez\u0142y z ciebie \u017Cartowni\u015B,
-      ale od razu wida\u0107, \u017Ce nie masz poj\u0119cia, co si\u0119 tu dzieje.
-      Ty chyba w\u0142a\u015Bnie przyjecha\u0142e\u015B prosto z jakiego\u015B zapomnianego
-      lasu, co? My\u015Blisz, \u017Ce wszystko si\u0119 tu rozwi\u0105zuje z\u0142otym
-      \u015Brodkiem, a rzeczywisto\u015B\u0107 to jeden wielki, pi\u0119kny obrazek?
-      G\xF3wno prawda, m\u0142ody, to ju\u017C nie ten sam \u015Bwiat!"
+  - text: "Ha! No prosz\u0119, niez\u0142y z ciebie \u017Cartowni\u015B! Ale od razu
+      wida\u0107, \u017Ce nie masz poj\u0119cia, w co si\u0119 pakujesz. Ty chyba
+      dopiero co wyjecha\u0142e\u015B z jakiej\u015B zapomnianej wioski, co? My\u015Blisz,
+      \u017Ce tu wszystko da si\u0119 za\u0142atwi\u0107 z\u0142otem i dobrym s\u0142owem?
+      C\xF3\u017C, obawiam si\u0119, \u017Ce rzeczywisto\u015B\u0107 ma zupe\u0142nie
+      inny scenariusz.\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
   - text: 'A jak to widzisz ty, mistrzu?
@@ -46095,72 +46094,67 @@ MonoBehaviour:
 '
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Ja? Ja to widz\u0119 tak, \u017Ce ten jebany kataklizm, kt\xF3ry spierdoli\u0142
-      wszystko, co by\u0142o, to dopiero pocz\u0105tek. Ty pewnie jeszcze wierzysz,
+  - text: "Ja? Ja to widz\u0119 tak, \u017Ce ten ca\u0142y kataklizm, kt\xF3ry zniszczy\u0142
+      nasze miasto, to dopiero pocz\u0105tek. Ty pewnie jeszcze masz nadziej\u0119,
       \u017Ce co\u015B z tego b\u0119dzie, prawda? Wiesz, kto tu teraz rz\u0105dzi?
-      Hm? Zgadnij. M\xF3j stary kumpel, Jakob Czmak, znany te\u017C jako \u201EFent
-      King\u201D, rozprowadza sw\xF3j proszek, a ca\u0142y Bulion wci\u0105ga go
-      jak narkoman po pierwszym strzale. A ty tu stoisz, jakby\u015B by\u0142 turyst\u0105!\r\n"
+      M\xF3j stary kumpel, Jakob Czmak, znany jako \u201EFent King\u201D. Handluje
+      swoim towarem, a ca\u0142e miasto tonie w jego d\u0142ugach i na\u0142ogach.
+      A ty tu stoisz, jakby\u015B by\u0142 turyst\u0105 na wakacjach!\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
-  - text: "Wi\u0119c, je\u015Bli dobrze rozumiem, wolisz dalej k\u0142a\u015B\u0107
-      si\u0119 z tym g\xF3wnem na boku, zamiast co\u015B z tym zrobi\u0107, prawda?"
+  - text: "Wi\u0119c je\u015Bli dobrze rozumiem, wolisz sta\u0107 z boku i nic nie
+      robi\u0107?\r\n"
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Ch\u0142opie, ty masz co\u015B w g\u0142owie, czy tylko pierdolone echo?
-      My tu nie rozmawiamy o czystym sumieniu, bo to nie miejsce na moralizowanie.
-      Prawda jest taka, \u017Ce nie ma ju\u017C porz\u0105dku. Je\u015Bli w og\xF3le
-      chcesz prze\u017Cy\u0107, musisz wiedzie\u0107, komu wcisn\u0105\u0107 n\xF3\u017C
-      w pier\u015B i na kim zarobi\u0107. My\u015Blisz, \u017Ce Paladyni ci\u0119
-      uratuj\u0105? Pff, to banda hipokryt\xF3w, co w najlepszym wypadku wpakuj\u0105
-      ci miecz w tak g\u0142\u0119boko, \u017Ce ci wyjdzie drug\u0105 stron\u0105
-      je\u015Bli im nie oddasz ostatniej paczki papieros\xF3w. Wi\u0119c, je\u015Bli
-      masz w tym mie\u015Bcie zamiar by\u0107 kim\u015B, to przygotuj si\u0119 na
-      to, \u017Ce nikt ci nic za darmo nie da."
+  - text: "Ch\u0142opie, ty naprawd\u0119 my\u015Blisz, \u017Ce to kwestia wyboru?
+      To nie opowie\u015B\u0107 o bohaterach i z\u0142oczy\u0144cach. Je\u015Bli
+      chcesz tu prze\u017Cy\u0107, musisz wiedzie\u0107, komu mo\u017Cna zaufa\u0107,
+      a komu lepiej podstawi\u0107 nog\u0119. My\u015Blisz, \u017Ce Paladyni ci pomog\u0105?
+      Taa... oni maj\u0105 swoj\u0105 w\u0142asn\u0105 wizj\u0119 porz\u0105dku,
+      a w ich oczach jeste\u015B jedynie kolejnym problemem do rozwi\u0105zania.
+      Je\u015Bli nie oddasz im ostatniej paczki papieros\xF3w, potraktuj\u0105 ci\u0119
+      jak ka\u017Cdego innego przeciwnika. W tym mie\u015Bcie nikt nie daje nic za
+      darmo.\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
-  - text: "A wi\u0119c nawo\u0142ujesz do wojny, m\xF3wisz, \u017Ce to jedyna opcja?"
+  - text: "Czyli wed\u0142ug ciebie jedyne, co mo\u017Cna zrobi\u0107, to walczy\u0107?\r\n\r\n"
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Nie, m\u0142ody, ja ci\u0119 nigdzie nie nawo\u0142uj\u0119. Ja tylko
-      pokazuj\u0119, \u017Ce ten \u015Bwiat to nie bajka. Chcesz w niego wskoczy\u0107,
-      to musisz umie\u0107 wyj\u015B\u0107 z niego ca\u0142ym. I jak przyjdzie ci
-      do g\u0142owy walczy\u0107, to lepiej nie zapomnij, \u017Ce nie masz tu \u017Cadnego
-      przyjaciela. Bo ostatecznie, jak w ka\u017Cdej grze, jest tylko jeden kr\xF3l,
-      a reszta to tylko martwe psy le\u017C\u0105ce na drodze do tronu. Zrozumia\u0142e\u015B?\r\n"
+  - text: "Nie, ch\u0142opcze. Ja ci\u0119 do niczego nie namawiam. Po prostu otwieram
+      ci oczy. Ten \u015Bwiat nie jest sprawiedliwy, a je\u015Bli chcesz co\u015B
+      w nim osi\u0105gn\u0105\u0107, musisz wiedzie\u0107, jak gra\u0107. A je\u015Bli
+      zdecydujesz si\u0119 na walk\u0119, pami\u0119taj \u2013 nie masz tu przyjaci\xF3\u0142.
+      Ostatecznie zawsze zostaje tylko jeden zwyci\u0119zca, a reszta to jedynie
+      pionki na drodze do tronu. Zrozumia\u0142e\u015B?\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
-  - text: Rozumiem
+  - text: Rozumiem.
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Czego ty do mnie przysz\u0142e\u015B? Chcesz narobi\u0107 ba\u0142aganu,
-      ale nie wiesz jeszcze, jak? Wiesz, co ci powiem? Zr\xF3b to. R\xF3b to, na
-      co masz ochot\u0119, ale pami\u0119taj, \u017Ce przyjdzie czas, kiedy zap\u0142acisz
-      za wszystkie swoje decyzje. Tak jak ja zap\u0142aci\u0142em za swoj\u0105 naiwno\u015B\u0107,
-      przyjacielu. Wiesz, jak to jest... Nie ma tu ju\u017C \u201Echcia\u0142em\u201D,
-      jest \u201Emusz\u0119\u201D. A jak chcesz, mog\u0119 ci pokaza\u0107, jak to
-      robi\u0107."
+  - text: "To powiedz mi, czego naprawd\u0119 chcesz? Przyszed\u0142e\u015B tu szuka\u0107
+      k\u0142opot\xF3w, ale jeszcze nie wiesz, jak je rozwi\u0105za\u0107? Dobrze
+      ci radz\u0119 \u2013 dzia\u0142aj, ale pami\u0119taj, \u017Ce pr\u0119dzej
+      czy p\xF3\u017Aniej zap\u0142acisz cen\u0119 za swoje decyzje. Tak jak ja zap\u0142aci\u0142em
+      za swoj\u0105 naiwno\u015B\u0107. Nie ma tu miejsca na \u201Echcia\u0142em\u201D,
+      liczy si\u0119 tylko \u201Emusz\u0119\u201D. Je\u015Bli chcesz, mog\u0119 ci
+      pokaza\u0107, jak si\u0119 w tym odnale\u017A\u0107.\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
   - text: "A co musz\u0119 zrobi\u0107?"
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Masz jaja, to zacznij od zadania. Je\u015Bli chcesz mie\u0107 jak\u0105kolwiek
-      szans\u0119 w tym pierdolonym mie\u015Bcie, musisz znale\u017A\u0107 jak\u0105\u015B
-      pieprzon\u0105 bro\u0144, bo bez tego nie wyjdziesz z tej dziury \u017Cywy.
-      Ja ci dam narz\u0119dzia, ale reszt\u0119 musisz sam ogarn\u0105\u0107. I je\u015Bli
-      si\u0119 w tym nie odnajdziesz, nie oczekuj, \u017Ce kto\u015B ci\u0119 przygarnie.
-      Miasto si\u0119 nie pie\u015Bci, kurwa. A jak nie rozumiesz tego, to musisz
-      szybko z\u0142apa\u0107 odpowiedni\u0105 perspektyw\u0119 \u2013 albo co\u015B
-      zbudujesz, albo ci\u0119 rozdupcy system."
+  - text: "Masz odwag\u0119? To zacznij od podstaw. Je\u015Bli chcesz mie\u0107 jak\u0105kolwiek
+      szans\u0119 w tym mie\u015Bcie, potrzebujesz broni. Bez niej nie wyjdziesz
+      st\u0105d \u017Cywy. Dam ci narz\u0119dzia, ale reszta zale\u017Cy od ciebie.
+      I zapami\u0119taj jedno \u2013 je\u015Bli nie zrozumiesz zasad tej gry, system
+      ci\u0119 zmia\u017Cd\u017Cy.\r\n"
     speaker: Kowal Jack
     voiceClip: {fileID: 0}
-  - text: " Dobrze, rozumiem. A co mam robi\u0107?"
+  - text: "Dobrze. A co dok\u0142adnie mam zrobi\u0107?\r\n"
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
-  - text: "Chod\u017A, poka\u017C\u0119 ci, gdzie jest miejsce, kt\xF3re pozwoli
-      ci wyj\u015B\u0107 z tej pierdolonej pu\u0142apki. Zr\xF3b to i nie b\xF3j
-      si\u0119, m\u0142ody. Bo je\u015Bli nie teraz, to nigdy.\r\n"
+  - text: "Chod\u017A, poka\u017C\u0119 ci, gdzie zaczyna si\u0119 prawdziwa droga.
+      Zr\xF3b to, co trzeba \u2013 bo je\u015Bli nie teraz, to kiedy?"
     speaker: Adam Pearl
     voiceClip: {fileID: 0}
   options:

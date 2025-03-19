@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: speed_potion
   itemName: Speed Potion
-  itemDescription: Monster Enegy White
+  itemDescription: Majster Enegy White
   itemIcon: {fileID: 21300000, guid: 7f22256ba362aec428772ca88e020330, type: 3}
   itemRarity: 0
   itemType: 0

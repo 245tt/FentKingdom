@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: leather_armor
   itemName: Leather Armor
-  itemDescription: Balenciaga jacket
+  itemDescription: 
   itemIcon: {fileID: 1129180862686864470, guid: af835a438e62df94087911736e7a79b1, type: 3}
   itemRarity: 0
   itemType: 2
   maxStack: 1
   value: 20
   defense: 5
+  speed: 0
+  strength: 0

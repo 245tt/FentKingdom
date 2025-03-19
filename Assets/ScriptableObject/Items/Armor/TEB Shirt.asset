@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: teb_shirt
   itemName: TEB Shirt
-  itemDescription: 'Stussy drip '
+  itemDescription: 
   itemIcon: {fileID: -3897371904596805483, guid: 80d927b8252c6b94d9c324d8bcb88706, type: 3}
   itemRarity: 0
   itemType: 2
   maxStack: 1
   value: 200
   defense: 2
+  speed: 0
+  strength: 0
